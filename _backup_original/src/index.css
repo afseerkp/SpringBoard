@@ -1,0 +1,43 @@
+:root {
+  color-scheme: light;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  background: #f7f8fb;
+  color: #1c1424;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #9f337e;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
