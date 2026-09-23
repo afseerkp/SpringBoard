@@ -1,3 +1,4 @@
+import { asset } from "../lib/asset.ts";
 import type { GalleryCategory, GalleryItem } from "../types/content.ts";
 
 export const galleryFilters: Array<"All" | GalleryCategory> = [
@@ -15,32 +16,32 @@ const allItems: GalleryItem[] = [
     title: "Ready for school",
     category: "School Life",
     tall: true,
-    visual: { type: "image", src: "/images/students-portrait.webp", alt: "Two smiling students in blue and white uniforms with school bags" },
+    visual: { type: "image", src: asset("/images/students-portrait.webp"), alt: "Two smiling students in blue and white uniforms with school bags" },
   },
   {
     id: "photo-books",
     title: "SpringBoard book collection",
     category: "Books",
-    visual: { type: "image", src: "/images/books.webp", alt: "A colourful stack of school books with an open SpringBoard storybook" },
+    visual: { type: "image", src: asset("/images/books.webp"), alt: "A colourful stack of school books with an open SpringBoard storybook" },
   },
   {
     id: "photo-uniforms",
     title: "Uniform collection",
     category: "Uniforms",
     tall: true,
-    visual: { type: "image", src: "/images/uniforms.webp", alt: "Blue and white school uniforms, ties, bows and bags on display", position: "center" },
+    visual: { type: "image", src: asset("/images/uniforms.webp"), alt: "Blue and white school uniforms, ties, bows and bags on display", position: "center" },
   },
   {
     id: "photo-stationery",
     title: "Pencil case essentials",
     category: "Stationery",
-    visual: { type: "image", src: "/images/stationery.webp", alt: "Pencil case with coloured pencils, eraser and ruler" },
+    visual: { type: "image", src: asset("/images/stationery.webp"), alt: "Pencil case with coloured pencils, eraser and ruler" },
   },
   {
     id: "photo-shoes",
     title: "School footwear range",
     category: "Shoes",
-    visual: { type: "image", src: "/images/shoes.webp", alt: "Black and brown school shoes and white sneakers" },
+    visual: { type: "image", src: asset("/images/shoes.webp"), alt: "Black and brown school shoes and white sneakers" },
   },
   {
     id: "books-stack",

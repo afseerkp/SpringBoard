@@ -10,9 +10,11 @@ const GalleryPage = lazy(() => import("./pages/GalleryPage.tsx"));
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage.tsx"));
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <Routes>
         <Route element={<SiteLayout />}>
           <Route index element={<HomePage />} />

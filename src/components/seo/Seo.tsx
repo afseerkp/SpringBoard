@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { siteConfig } from "../../config/site.ts";
 
 type SeoProps = {
   title: string;
@@ -20,13 +21,14 @@ function upsertMeta(attribute: "name" | "property", key: string, content: string
 export function Seo({ title, description, path }: SeoProps) {
   useEffect(() => {
     document.title = title;
-    const url = `${window.location.origin}${path}`;
+    const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+    const url = `${window.location.origin}${base}${path}`;
     upsertMeta("name", "description", description);
     upsertMeta("property", "og:title", title);
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:url", url);
-    upsertMeta("property", "og:image", `${window.location.origin}/brand/logo.png`);
+    upsertMeta("property", "og:image", `${window.location.origin}${siteConfig.logo}`);
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {

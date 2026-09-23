@@ -1,3 +1,5 @@
+import { asset } from "../lib/asset.ts";
+
 export type SocialLink = {
   label: string;
   href: string;
@@ -16,8 +18,8 @@ export const siteConfig = {
   motto: "Quality. Reach. Reliability.",
   description:
     "SpringBoard Educational School Supplies LLC, Ajman — a trusted education supply partner for IGCSE and CBSE schools across the Middle East and Africa.",
-  logo: "/brand/logo-transparent.png",
-  logoLight: "/brand/logo-light.png",
+  logo: asset("/brand/logo-transparent.png"),
+  logoLight: asset("/brand/logo-light.png"),
   logoWidth: 944,
   logoHeight: 335,
   phone: "PHONE_NUMBER",

@@ -9,6 +9,7 @@ import { PageHero } from "../components/ui/PageHero.tsx";
 import { Reveal } from "../components/ui/Reveal.tsx";
 import { Accent, Eyebrow, SectionHeading } from "../components/ui/SectionHeading.tsx";
 import { StatCounter } from "../components/ui/StatCounter.tsx";
+import { asset } from "../lib/asset.ts";
 import { colors, fontDisplay, gradients, radii } from "../theme/tokens.ts";
 
 export default function AboutPage() {
@@ -102,9 +103,9 @@ export default function AboutPage() {
             }}
           >
             {[
-              { src: "/images/uniforms.webp", alt: "School uniform collection on display", label: "School Uniforms", span: true },
-              { src: "/images/books.webp", alt: "SpringBoard school books and stationery", label: "Books & Stationery" },
-              { src: "/images/shoes.webp", alt: "School shoes in black, brown and white", label: "School Shoes" },
+              { src: asset("/images/uniforms.webp"), alt: "School uniform collection on display", label: "School Uniforms", span: true },
+              { src: asset("/images/books.webp"), alt: "SpringBoard school books and stationery", label: "Books & Stationery" },
+              { src: asset("/images/shoes.webp"), alt: "School shoes in black, brown and white", label: "School Shoes" },
             ].map((photo, index) => (
               <Box key={photo.src} sx={{ gridRow: { md: photo.span ? "span 2" : "auto" } }}>
                 <Reveal delay={index * 0.08} style={{ height: "100%" }}>

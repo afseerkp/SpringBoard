@@ -1,3 +1,4 @@
+import { asset } from "../lib/asset.ts";
 import type { ProductCategory } from "../types/content.ts";
 
 export const productCategories: ProductCategory[] = [
@@ -28,9 +29,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Made to be opened every day.",
     qualityText:
       "Bindings, covers and paper are chosen for repeated handling, so books stay useful from the start of term through the last lesson.",
-    hero: { type: "image", src: "/images/books.webp", alt: "A colourful stack of SpringBoard school books with an open storybook, pencil case and crayons", position: "center 45%" },
+    hero: { type: "image", src: asset("/images/books.webp"), alt: "A colourful stack of SpringBoard school books with an open storybook, pencil case and crayons", position: "center 45%" },
     gallery: [
-      { type: "image", src: "/images/books.webp", alt: "SpringBoard school books and learning materials" },
+      { type: "image", src: asset("/images/books.webp"), alt: "SpringBoard school books and learning materials" },
       { type: "scene", scene: "books-stack", alt: "Stacked school books" },
       { type: "scene", scene: "books-open", alt: "An open school book with a pencil" },
       { type: "scene", scene: "books-shelf", alt: "A row of upright school books" },
@@ -63,9 +64,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Tools that stay in the pencil case.",
     qualityText:
       "Stationery is chosen for grip, line quality and everyday durability, so students can rely on it through a full school week.",
-    hero: { type: "image", src: "/images/stationery.webp", alt: "A yellow pencil case with coloured pencils, an eraser and a ruler beside school books", position: "35% center" },
+    hero: { type: "image", src: asset("/images/stationery.webp"), alt: "A yellow pencil case with coloured pencils, an eraser and a ruler beside school books", position: "35% center" },
     gallery: [
-      { type: "image", src: "/images/stationery.webp", alt: "Pencil case, pencils, ruler and eraser" },
+      { type: "image", src: asset("/images/stationery.webp"), alt: "Pencil case, pencils, ruler and eraser" },
       { type: "scene", scene: "stationery-spread", alt: "A spread of school stationery" },
       { type: "scene", scene: "stationery-geometry", alt: "Geometry tools arranged on a desk" },
       { type: "scene", scene: "stationery-colors", alt: "A fan of coloured pencils" },
@@ -97,9 +98,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Comfort that lasts the school day.",
     qualityText:
       "Fabric, fit and finish are considered together, so uniforms look neat in the morning and stay comfortable until home time.",
-    hero: { type: "image", src: "/images/uniforms.webp", alt: "A display of blue and white school uniforms, ties, bows and school bags" },
+    hero: { type: "image", src: asset("/images/uniforms.webp"), alt: "A display of blue and white school uniforms, ties, bows and school bags" },
     gallery: [
-      { type: "image", src: "/images/uniforms.webp", alt: "School uniform collection on display" },
+      { type: "image", src: asset("/images/uniforms.webp"), alt: "School uniform collection on display" },
       { type: "scene", scene: "uniform-girl", alt: "Girl's school uniform with a blue pinafore and red bow" },
       { type: "scene", scene: "uniform-boy", alt: "Boy's school uniform with blue trousers and a red tie" },
       { type: "scene", scene: "uniform-pair", alt: "School uniforms arranged side by side" },
@@ -131,9 +132,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Built for a day on their feet.",
     qualityText:
       "Uppers, stitching and soles are considered for comfort and durability, so shoes keep their shape through ordinary school weeks.",
-    hero: { type: "image", src: "/images/shoes.webp", alt: "Black and brown leather school shoes and white sneakers with matching bow ties" },
+    hero: { type: "image", src: asset("/images/shoes.webp"), alt: "Black and brown leather school shoes and white sneakers with matching bow ties" },
     gallery: [
-      { type: "image", src: "/images/shoes.webp", alt: "School shoes in black, brown and white" },
+      { type: "image", src: asset("/images/shoes.webp"), alt: "School shoes in black, brown and white" },
       { type: "scene", scene: "shoes-black", alt: "A pair of black lace-up school shoes" },
       { type: "scene", scene: "shoes-brown", alt: "A pair of brown strap school shoes" },
       { type: "scene", scene: "shoes-pair", alt: "Black and brown school shoes together" },

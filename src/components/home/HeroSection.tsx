@@ -4,6 +4,7 @@ import { Award, GraduationCap } from "lucide-react";
 import { useRef } from "react";
 import type { ReactNode } from "react";
 import { siteConfig, stats } from "../../config/site.ts";
+import { asset } from "../../lib/asset.ts";
 import { colors, ease, fontDisplay, gradients, radii } from "../../theme/tokens.ts";
 import { ActionButton } from "../ui/ActionButton.tsx";
 import { HeroOrnaments } from "../ui/PageHero.tsx";
@@ -245,7 +246,7 @@ function HeroShowcase() {
         />
         <Box
           component="img"
-          src="/images/students-portrait.webp"
+          src={asset("/images/students-portrait.webp")}
           alt="Two smiling students in blue and white school uniforms, ready for the school day"
           width={1200}
           height={1018}
