@@ -64,9 +64,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Tools that stay in the pencil case.",
     qualityText:
       "Stationery is chosen for grip, line quality and everyday durability, so students can rely on it through a full school week.",
-    hero: { type: "image", src: asset("/images/stationery.webp"), alt: "A yellow pencil case with coloured pencils, an eraser and a ruler beside school books", position: "35% center" },
+    hero: { type: "image", src: asset("/images/stationery.webp"), alt: "A pencil case full of coloured pencils surrounded by notebooks, pens, geometry tools, paints, erasers and a school bag", position: "center" },
     gallery: [
-      { type: "image", src: asset("/images/stationery.webp"), alt: "Pencil case, pencils, ruler and eraser" },
+      { type: "image", src: asset("/images/stationery.webp"), alt: "School stationery: notebooks, pens, pencils, geometry set, paints and erasers" },
       { type: "scene", scene: "stationery-spread", alt: "A spread of school stationery" },
       { type: "scene", scene: "stationery-geometry", alt: "Geometry tools arranged on a desk" },
       { type: "scene", scene: "stationery-colors", alt: "A fan of coloured pencils" },

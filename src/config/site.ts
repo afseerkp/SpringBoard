@@ -194,13 +194,13 @@ export const navLinks = [
 export const catalogues = {
   shoes: {
     title: "School Shoes Catalogue",
-    description: "Our complete brand-wise school footwear range — iD, Paragon School World and Puma — in one catalogue.",
-    file: asset("/catalogues/springboard-school-shoes-catalogue.pdf"),
-    fileName: "SpringBoard-School-Shoes-Catalogue.pdf",
+    description: "Our complete school footwear range — canvas, formal, velcro and sports styles — with sizes and colours for every shoe.",
+    file: asset("/catalogues/school-shoes-catalogue.pdf"),
+    fileName: "School Shoes Catalogue.pdf",
     cover: asset("/images/catalogue-shoes-cover.webp"),
     preview: asset("/images/catalogue-shoes-page.webp"),
-    brands: ["iD", "Paragon", "Puma"],
-    pages: 24,
-    size: "13.8 MB",
+    brands: ["Canvas", "Formal", "Velcro", "Sports"],
+    pages: 14,
+    size: "1.3 MB",
   },
 } as const;

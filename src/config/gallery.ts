@@ -33,9 +33,9 @@ const allItems: GalleryItem[] = [
   },
   {
     id: "photo-stationery",
-    title: "Pencil case essentials",
+    title: "Stationery essentials",
     category: "Stationery",
-    visual: { type: "image", src: asset("/images/stationery.webp"), alt: "Pencil case with coloured pencils, eraser and ruler" },
+    visual: { type: "image", src: asset("/images/stationery.webp"), alt: "School stationery: notebooks, pens, pencils, geometry set, paints and erasers" },
   },
   {
     id: "photo-shoes",
