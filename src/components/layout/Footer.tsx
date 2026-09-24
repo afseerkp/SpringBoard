@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { groupCompanies, navLinks, offices, siteConfig } from "../../config/site.ts";
+import { catalogues, groupCompanies, navLinks, offices, siteConfig } from "../../config/site.ts";
 import { productCategories } from "../../config/products.ts";
 import { colors, fontDisplay, gradients, layout } from "../../theme/tokens.ts";
 import { ActionButton } from "../ui/ActionButton.tsx";
@@ -103,6 +103,15 @@ export function Footer() {
                 {category.name}
               </FooterLink>
             ))}
+            <Box
+              component="a"
+              href={catalogues.shoes.file}
+              download={catalogues.shoes.fileName}
+              sx={{ display: "inline-flex", alignItems: "center", gap: 0.8, color: colors.champagne, textDecoration: "none", fontSize: "0.95rem", width: "fit-content", "&:hover": { color: colors.white } }}
+            >
+              <Download size={14} aria-hidden="true" />
+              Shoe Catalogue (PDF)
+            </Box>
           </FooterColumn>
           <FooterColumn title="Our Offices">
             <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2.5 }}>

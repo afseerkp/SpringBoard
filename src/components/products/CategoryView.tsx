@@ -6,6 +6,7 @@ import type { ProductCategory } from "../../types/content.ts";
 import { colors, fontDisplay, gradients, radii } from "../../theme/tokens.ts";
 import { ShowcaseCard } from "../home/CategoryShowcase.tsx";
 import { ActionButton } from "../ui/ActionButton.tsx";
+import { CatalogueDownload } from "../ui/CatalogueDownload.tsx";
 import { PageContainer } from "../ui/PageContainer.tsx";
 import { PageHero } from "../ui/PageHero.tsx";
 import { Reveal } from "../ui/Reveal.tsx";
@@ -45,6 +46,11 @@ export function CategoryView({ category }: { category: ProductCategory }) {
           <ActionButton to="/contact" variant="gold">
             Request a Quote
           </ActionButton>
+          {category.slug === "shoes" ? (
+            <ActionButton href="#catalogue" variant="outlineLight">
+              Download Catalogue
+            </ActionButton>
+          ) : null}
           <ActionButton to="/products" variant="outlineLight">
             All Products
           </ActionButton>
@@ -126,6 +132,8 @@ export function CategoryView({ category }: { category: ProductCategory }) {
           </Box>
         </PageContainer>
       </Box>
+
+      {category.slug === "shoes" ? <CatalogueDownload /> : null}
 
       <Box component="section" sx={{ py: { xs: 10, md: 14 }, background: colors.ivory }}>
         <PageContainer wide>

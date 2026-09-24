@@ -5,6 +5,7 @@ import { GroupStrip, IntroSection } from "../components/home/IntroSection.tsx";
 import { ClientsSection, SolutionsSection } from "../components/home/StorySections.tsx";
 import { StrengthsSection, VisionSection } from "../components/home/ValueSections.tsx";
 import { Seo } from "../components/seo/Seo.tsx";
+import { CatalogueDownload } from "../components/ui/CatalogueDownload.tsx";
 
 export default function HomePage() {
   const structuredData = {
@@ -30,6 +31,7 @@ export default function HomePage() {
       <IntroSection />
       <SolutionsSection />
       <CategoryShowcase />
+      <CatalogueDownload />
       <StrengthsSection />
       <ClientsSection />
       <VisionSection />

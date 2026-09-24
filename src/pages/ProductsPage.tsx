@@ -4,6 +4,7 @@ import { siteConfig } from "../config/site.ts";
 import { productCategories } from "../config/products.ts";
 import { Seo } from "../components/seo/Seo.tsx";
 import { ActionButton } from "../components/ui/ActionButton.tsx";
+import { CatalogueDownload } from "../components/ui/CatalogueDownload.tsx";
 import { PageContainer } from "../components/ui/PageContainer.tsx";
 import { PageHero } from "../components/ui/PageHero.tsx";
 import { Reveal } from "../components/ui/Reveal.tsx";
@@ -87,6 +88,7 @@ export default function ProductsPage() {
           </Box>
         </PageContainer>
       </Box>
+      <CatalogueDownload />
     </>
   );
 }

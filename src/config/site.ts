@@ -189,3 +189,18 @@ export const navLinks = [
   { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
 ] as const;
+
+/** Downloadable PDF catalogues. Put the PDF in public/catalogues and list it here. */
+export const catalogues = {
+  shoes: {
+    title: "School Shoes Catalogue",
+    description: "Our complete brand-wise school footwear range — iD, Paragon School World and Puma — in one catalogue.",
+    file: asset("/catalogues/springboard-school-shoes-catalogue.pdf"),
+    fileName: "SpringBoard-School-Shoes-Catalogue.pdf",
+    cover: asset("/images/catalogue-shoes-cover.webp"),
+    preview: asset("/images/catalogue-shoes-page.webp"),
+    brands: ["iD", "Paragon", "Puma"],
+    pages: 24,
+    size: "13.8 MB",
+  },
+} as const;

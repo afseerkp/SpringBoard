@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, BookOpen, ChevronDown, Footprints, Menu, Pencil, Shirt } from "lucide-react";
+import { ArrowRight, BookOpen, ChevronDown, Download, Footprints, Menu, Pencil, Shirt } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { navLinks, siteConfig } from "../../config/site.ts";
+import { catalogues, navLinks, siteConfig } from "../../config/site.ts";
 import { productCategories } from "../../config/products.ts";
 import { colors, ease, gradients, layout, radii, shadows } from "../../theme/tokens.ts";
 import { MobileMenu } from "./MobileMenu.tsx";
@@ -277,6 +277,30 @@ export function Header() {
                             </Box>
                             );
                           })}
+                          <Box
+                            component="a"
+                            href={catalogues.shoes.file}
+                            download={catalogues.shoes.fileName}
+                            role="menuitem"
+                            sx={{
+                              mt: 0.5,
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 1,
+                              px: 1.5,
+                              py: 1.1,
+                              borderRadius: radii.sm,
+                              border: `1px dashed ${colors.borderStrong}`,
+                              color: colors.purple,
+                              fontSize: "0.86rem",
+                              fontWeight: 600,
+                              textDecoration: "none",
+                              "&:hover": { background: colors.purpleSoft, borderColor: colors.purple },
+                            }}
+                          >
+                            <Download size={16} aria-hidden="true" />
+                            Download Shoe Catalogue (PDF)
+                          </Box>
                         </Box>
                       </Box>
                     </motion.div>
