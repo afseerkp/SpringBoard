@@ -41,7 +41,7 @@ const allItems: GalleryItem[] = [
     id: "photo-shoes",
     title: "School footwear range",
     category: "Shoes",
-    visual: { type: "image", src: asset("/images/shoes.webp"), alt: "Black and brown school shoes and white sneakers" },
+    visual: { type: "image", src: asset("/images/shoes.webp"), alt: "Black, brown and white lace-up school shoes" },
   },
   {
     id: "books-stack",

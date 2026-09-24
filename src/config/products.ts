@@ -132,9 +132,9 @@ export const productCategories: ProductCategory[] = [
     qualityTitle: "Built for a day on their feet.",
     qualityText:
       "Uppers, stitching and soles are considered for comfort and durability, so shoes keep their shape through ordinary school weeks.",
-    hero: { type: "image", src: asset("/images/shoes.webp"), alt: "Black and brown leather school shoes and white sneakers with matching bow ties" },
+    hero: { type: "image", src: asset("/images/shoes.webp"), alt: "Black, brown and white lace-up school shoes" },
     gallery: [
-      { type: "image", src: asset("/images/shoes.webp"), alt: "School shoes in black, brown and white" },
+      { type: "image", src: asset("/images/shoes.webp"), alt: "Lace-up school shoes in black, brown and white" },
       { type: "scene", scene: "shoes-black", alt: "A pair of black lace-up school shoes" },
       { type: "scene", scene: "shoes-brown", alt: "A pair of brown strap school shoes" },
       { type: "scene", scene: "shoes-pair", alt: "Black and brown school shoes together" },
