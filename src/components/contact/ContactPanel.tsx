@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
 import { offices, siteConfig } from "../../config/site.ts";
@@ -173,10 +173,9 @@ export function ContactForm() {
 }
 
 const info = [
-  { label: "Phone", value: siteConfig.phone, icon: Phone },
-  { label: "Email", value: siteConfig.email, icon: Mail },
+  { label: "Phone", value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/\s/g, "")}`, icon: Phone },
+  { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}`, icon: Mail },
   { label: "Head office", value: siteConfig.address, icon: MapPin },
-  { label: "Working hours", value: siteConfig.workingHours, icon: Clock },
 ];
 
 export function ContactInfo() {
@@ -222,7 +221,21 @@ export function ContactInfo() {
                   </Box>
                   <Box>
                     <Box sx={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: colors.onDarkSubtle }}>{item.label}</Box>
-                    <Box sx={{ mt: 0.4, fontWeight: 500, lineHeight: 1.5 }}>{item.value}</Box>
+                    <Box
+                      component={"href" in item ? "a" : "div"}
+                      href={"href" in item ? item.href : undefined}
+                      sx={{
+                        display: "block",
+                        mt: 0.4,
+                        fontWeight: 500,
+                        lineHeight: 1.5,
+                        color: "inherit",
+                        textDecoration: "none",
+                        "&:hover": { color: "href" in item ? colors.champagne : "inherit" },
+                      }}
+                    >
+                      {item.value}
+                    </Box>
                   </Box>
                 </Box>
               );

@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { ArrowUpRight, Download, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, Mail, MapPin, Phone } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { catalogues, groupCompanies, navLinks, offices, siteConfig } from "../../config/site.ts";
@@ -80,6 +80,14 @@ export function Footer() {
             </Box>
             <Box component="p" sx={{ m: 0, mt: 3, maxWidth: 340, color: colors.onDark, lineHeight: 1.75, fontSize: "0.95rem" }}>
               Connecting publishers, schools and students through quality educational solutions.
+            </Box>
+            <Box sx={{ mt: 3, display: "grid", gap: 1 }}>
+              <FooterContact href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} icon={<Phone size={14} aria-hidden="true" />}>
+                {siteConfig.phone}
+              </FooterContact>
+              <FooterContact href={`mailto:${siteConfig.email}`} icon={<Mail size={14} aria-hidden="true" />}>
+                {siteConfig.email}
+              </FooterContact>
             </Box>
             <Box sx={{ mt: 3, display: "grid", gap: 0.8 }}>
               {groupCompanies.slice(1).map((company) => (
@@ -165,6 +173,29 @@ function FooterColumn({ title, children }: { title: string; children: ReactNode 
         {title}
       </Box>
       <Box sx={{ display: "grid", gap: 1.3 }}>{children}</Box>
+    </Box>
+  );
+}
+
+function FooterContact({ href, icon, children }: { href: string; icon: ReactNode; children: ReactNode }) {
+  return (
+    <Box
+      component="a"
+      href={href}
+      sx={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 1,
+        color: colors.onDark,
+        textDecoration: "none",
+        fontSize: "0.95rem",
+        width: "fit-content",
+        transition: "color 0.25s ease",
+        "&:hover": { color: colors.champagne },
+      }}
+    >
+      {icon}
+      {children}
     </Box>
   );
 }

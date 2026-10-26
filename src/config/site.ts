@@ -7,7 +7,6 @@ export type SocialLink = {
 
 /**
  * Company details live here so the public site can be updated in one place.
- * Contact values marked as placeholders should be replaced before launch.
  */
 export const siteConfig = {
   groupName: "SpringBoard Group of Companies",
@@ -22,10 +21,9 @@ export const siteConfig = {
   logoLight: asset("/brand/logo-light.png"),
   logoWidth: 944,
   logoHeight: 335,
-  phone: "PHONE_NUMBER",
-  email: "EMAIL_ADDRESS",
+  phone: "+971 6 767 3919",
+  email: "sales@springboard.ae",
   address: "Ajman, United Arab Emirates",
-  workingHours: "WORKING_HOURS",
   socialLinks: [] as SocialLink[],
 } as const;
 

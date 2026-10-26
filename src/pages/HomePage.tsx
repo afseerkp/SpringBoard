@@ -15,6 +15,8 @@ export default function HomePage() {
     alternateName: siteConfig.groupName,
     description: siteConfig.description,
     logo: siteConfig.logo,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
     address: { "@type": "PostalAddress", addressLocality: "Ajman", addressCountry: "AE" },
   };
 
